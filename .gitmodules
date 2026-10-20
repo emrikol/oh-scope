@@ -1,0 +1,3 @@
+[submodule "vendor/OpenHantek6022"]
+	path = vendor/OpenHantek6022
+	url = https://github.com/OpenHantek/OpenHantek6022.git

@@ -1,0 +1,15 @@
+.DS_Store
+.swiftpm/
+.build/
+build/
+DerivedData/
+*.xcuserstate
+xcuserdata/
+
+# Local application and instrument state
+*.ini
+*.log
+
+# Captures and generated output are lab artifacts, not source.
+captures/
+plots/
