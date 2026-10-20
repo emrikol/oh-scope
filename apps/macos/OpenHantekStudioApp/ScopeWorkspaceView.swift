@@ -14,7 +14,7 @@ struct ScopeWorkspaceView: View {
                         .foregroundStyle(.secondary)
                 }
             }
-            .navigationTitle("Graticule")
+            .navigationTitle("OpenHantek Studio")
             .navigationSplitViewColumnWidth(min: 210, ideal: 240)
         } detail: {
             VStack(spacing: 0) {

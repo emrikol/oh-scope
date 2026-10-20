@@ -1,8 +1,8 @@
-# Graticule architecture
+# OpenHantek Studio architecture
 
 ## Direction
 
-Graticule uses native interfaces on each platform and shares hardware,
+OpenHantek Studio uses native interfaces on each platform and shares hardware,
 acquisition, and portable signal-processing code through a C++ core. SwiftUI,
 AppKit, and Metal form the macOS application. Android can use the same core
 through JNI while retaining a Jetpack Compose interface.

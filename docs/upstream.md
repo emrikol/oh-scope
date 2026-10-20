@@ -35,4 +35,4 @@ source snapshots, broad formatting changes, and directory reorganizations.
 
 Generally useful changes, such as a backend library target or separation of
 acquisition settings from view settings, should be proposed upstream. The C
-bridge and native application remain Graticule-specific.
+bridge and native application remain OpenHantek Studio-specific.

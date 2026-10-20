@@ -3,17 +3,17 @@
 import PackageDescription
 
 let package = Package(
-    name: "Graticule",
+    name: "OpenHantekStudio",
     platforms: [
         .macOS(.v14)
     ],
     products: [
-        .executable(name: "Graticule", targets: ["GraticuleApp"])
+        .executable(name: "OpenHantekStudio", targets: ["OpenHantekStudioApp"])
     ],
     targets: [
         .executableTarget(
-            name: "GraticuleApp",
-            path: "apps/macos/GraticuleApp"
+            name: "OpenHantekStudioApp",
+            path: "apps/macos/OpenHantekStudioApp"
         )
     ]
 )

@@ -1,7 +1,7 @@
 import SwiftUI
 
 @main
-struct GraticuleApp: App {
+struct OpenHantekStudioApp: App {
     var body: some Scene {
         WindowGroup {
             ScopeWorkspaceView()

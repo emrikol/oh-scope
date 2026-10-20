@@ -3,7 +3,7 @@
 # Do not replace this list with a glob. An upstream update must make source-list
 # changes visible during review.
 
-set(GRATICULE_OPENHANTEK_SOURCES
+set(OPENHANTEK_STUDIO_UPSTREAM_SOURCES
     ${OPENHANTEK_ROOT}/openhantek/src/hantekprotocol/controlcommand.cpp
     ${OPENHANTEK_ROOT}/openhantek/src/hantekprotocol/controlStructs.cpp
 

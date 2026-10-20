@@ -8,7 +8,7 @@
   "configurePresets": [
     {
       "name": "development",
-      "displayName": "Graticule development",
+      "displayName": "OpenHantek Studio development",
       "generator": "Ninja",
       "binaryDir": "${sourceDir}/build/development",
       "cacheVariables": {
@@ -16,8 +16,8 @@
         "CMAKE_CXX_STANDARD": "20",
         "CMAKE_CXX_STANDARD_REQUIRED": "ON",
         "CMAKE_EXPORT_COMPILE_COMMANDS": "ON",
-        "GRATICULE_BUILD_OPENHANTEK_COMPAT": "ON",
-        "GRATICULE_BUILD_TESTS": "ON"
+        "OPENHANTEK_STUDIO_BUILD_CORE_COMPAT": "ON",
+        "OPENHANTEK_STUDIO_BUILD_TESTS": "ON"
       }
     }
   ],

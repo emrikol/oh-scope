@@ -27,7 +27,7 @@ OpenHantek branch implicitly.
 
 ```bash
 swift build
-swift run Graticule
+swift run OpenHantekStudio
 ```
 
 Swift Package Manager currently builds a development executable. A signed app

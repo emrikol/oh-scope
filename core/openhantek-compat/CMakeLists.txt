@@ -13,25 +13,25 @@ endif()
 
 include("${PROJECT_SOURCE_DIR}/cmake/OpenHantekSources.cmake")
 
-add_library(GraticuleOpenHantekCompat STATIC ${GRATICULE_OPENHANTEK_SOURCES})
-add_library(Graticule::OpenHantekCompat ALIAS GraticuleOpenHantekCompat)
+add_library(OpenHantekCoreCompat STATIC ${OPENHANTEK_STUDIO_UPSTREAM_SOURCES})
+add_library(OpenHantekStudio::CoreCompat ALIAS OpenHantekCoreCompat)
 
-set_target_properties(GraticuleOpenHantekCompat PROPERTIES
+set_target_properties(OpenHantekCoreCompat PROPERTIES
     AUTOMOC ON
     AUTORCC ON
     POSITION_INDEPENDENT_CODE ON
 )
 
-target_compile_features(GraticuleOpenHantekCompat PUBLIC cxx_std_20)
+target_compile_features(OpenHantekCoreCompat PUBLIC cxx_std_20)
 
-target_include_directories(GraticuleOpenHantekCompat
+target_include_directories(OpenHantekCoreCompat
     PUBLIC
         "${OPENHANTEK_ROOT}/openhantek/src"
         "${OPENHANTEK_ROOT}/openhantek/src/hantekdso"
         "${OPENHANTEK_ROOT}/openhantek/src/usb"
 )
 
-target_link_libraries(GraticuleOpenHantekCompat
+target_link_libraries(OpenHantekCoreCompat
     PUBLIC
         Qt6::Core
         Qt6::Gui
@@ -41,15 +41,15 @@ target_link_libraries(GraticuleOpenHantekCompat
         Threads::Threads
 )
 
-target_compile_options(GraticuleOpenHantekCompat PRIVATE
+target_compile_options(OpenHantekCoreCompat PRIVATE
     -Wall
     -Wextra
     -Wpedantic
 )
 
-if(GRATICULE_BUILD_TESTS)
+if(OPENHANTEK_STUDIO_BUILD_TESTS)
     enable_testing()
-    add_executable(graticule_openhantek_model_smoke tests/model_spec_smoke.cpp)
-    target_link_libraries(graticule_openhantek_model_smoke PRIVATE Graticule::OpenHantekCompat)
-    add_test(NAME openhantek_model_spec COMMAND graticule_openhantek_model_smoke)
+    add_executable(openhantek_model_smoke tests/model_spec_smoke.cpp)
+    target_link_libraries(openhantek_model_smoke PRIVATE OpenHantekStudio::CoreCompat)
+    add_test(NAME openhantek_model_spec COMMAND openhantek_model_smoke)
 endif()

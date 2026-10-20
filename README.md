@@ -1,19 +1,19 @@
-# Graticule
+# OpenHantek Studio
 
-Graticule is a modern, open-source oscilloscope application built around a
-native Swift interface and a portable hardware and signal-processing core. The
-first supported instrument is the Hantek 6022BE.
+OpenHantek Studio is a modern, open-source oscilloscope application built
+around a native Swift interface and a portable hardware and signal-processing
+core. The first supported instrument is the Hantek 6022BE.
 
-The name comes from the measurement grid behind an oscilloscope trace. It is a
-working title and deliberately does not tie the application to one hardware
-vendor.
+The name describes the project's foundation and purpose directly: a modern
+instrument workspace built from the OpenHantek acquisition code. OpenHantek
+Studio is an independent community project and is not affiliated with Hantek.
 
 ## Current status
 
 The project is in its initial extraction phase:
 
 - OpenHantek6022 is pinned as a Git submodule.
-- `GraticuleOpenHantekCompat` builds selected acquisition sources as a static
+- `OpenHantekCoreCompat` builds selected acquisition sources as a static
   library while leaving the upstream GUI untouched.
 - A small SwiftUI application establishes the native macOS application shell.
 - The stable C bridge and Metal waveform renderer are the next milestones.
@@ -25,7 +25,7 @@ No physical-hardware behavior has been validated yet.
 ```text
 SwiftUI and AppKit controls       Metal waveform renderer
              \                         /
-              Graticule Swift model
+            OpenHantek Swift model
                        |
                  stable C bridge
                        |
@@ -72,6 +72,6 @@ first extraction target.
 ## Licensing
 
 OpenHantek6022 source files are licensed under GPL-2.0-or-later. Linking that
-code into a distributed Graticule application requires GPL-compatible release
+code into a distributed OpenHantek Studio application requires GPL-compatible release
 terms and corresponding source. The project license will be finalized before
 the first distributable application build.
