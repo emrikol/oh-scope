@@ -3,17 +3,17 @@
 import PackageDescription
 
 let package = Package(
-    name: "OpenHantekStudio",
+    name: "OhScope",
     platforms: [
         .macOS(.v14)
     ],
     products: [
-        .executable(name: "OpenHantekStudio", targets: ["OpenHantekStudioApp"])
+        .executable(name: "OhScope", targets: ["OhScopeApp"])
     ],
     targets: [
         .executableTarget(
-            name: "OpenHantekStudioApp",
-            path: "apps/macos/OpenHantekStudioApp"
+            name: "OhScopeApp",
+            path: "apps/macos/OhScopeApp"
         )
     ]
 )

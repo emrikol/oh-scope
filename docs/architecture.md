@@ -1,8 +1,8 @@
-# OpenHantek Studio architecture
+# Oh Scope architecture
 
 ## Direction
 
-OpenHantek Studio uses native interfaces on each platform and shares hardware,
+Oh Scope uses native interfaces on each platform and shares hardware,
 acquisition, and portable signal-processing code through a C++ core. SwiftUI,
 AppKit, and Metal form the macOS application. Android can use the same core
 through JNI while retaining a Jetpack Compose interface.
@@ -23,9 +23,10 @@ the drawable's physical pixel resolution.
 
 ### Stable bridge
 
-The bridge will expose opaque handles, value settings, immutable frames, and
-explicit ownership through a C ABI. Qt and C++ standard-library types must not
-cross this boundary.
+The bridge exposes a versioned C ABI from `libOhScopeCore`. Its first revision
+provides build provenance and supported-model capabilities. Acquisition will
+add opaque handles, value settings, immutable frames, and explicit ownership.
+Qt and C++ standard-library types must not cross this boundary.
 
 ### Portable core
 

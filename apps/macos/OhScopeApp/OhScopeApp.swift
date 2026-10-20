@@ -1,7 +1,7 @@
 import SwiftUI
 
 @main
-struct OpenHantekStudioApp: App {
+struct OhScopeApp: App {
     var body: some Scene {
         WindowGroup {
             ScopeWorkspaceView()

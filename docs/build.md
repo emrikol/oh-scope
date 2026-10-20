@@ -27,13 +27,13 @@ OpenHantek branch implicitly.
 
 ```bash
 swift build
-swift run OpenHantekStudio
+swift run OhScope
 ```
 
 Swift Package Manager currently builds a development executable. A signed app
 bundle and Xcode project will be added when the bridge is ready to embed.
 
-## Compatibility core
+## Core library
 
 Required development packages are CMake, Ninja, Qt 6, and libusb.
 
@@ -43,9 +43,10 @@ cmake --build --preset development
 ctest --preset development
 ```
 
-The first compatibility target intentionally excludes OpenHantek's spectrum
-generator and FFTW dependency. Spectrum processing will be introduced behind a
-portable processing interface.
+The build produces `libOhScopeCore` and a plain-C API test. The first core
+target intentionally excludes OpenHantek's spectrum generator and FFTW
+dependency. Spectrum processing will be introduced behind a portable
+processing interface.
 
 ## Reproducible releases
 

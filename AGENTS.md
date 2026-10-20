@@ -1,8 +1,10 @@
-# Hantek 6022BE Workbench
+# Oh Scope
 
 ## Purpose
 
-This directory is the working area for a Hantek 6022BE USB oscilloscope. Use it for setup notes, repeatable capture scripts, measurements, exported traces, plots, and small utilities related to the instrument.
+This directory contains Oh Scope, an open-source oscilloscope application for macOS and a portable hardware and signal-processing core. The first supported instruments are the Hantek 6022BE and 6022BL.
+
+Keep the public boundary in `core/oh-scope-core/include/ohscope/core.h` free of Qt and C++ types. Platform interfaces should depend on the versioned C API rather than include OpenHantek headers directly. Keep upstream changes out of the submodule whenever an adapter in this repository can do the job.
 
 Keep the workspace useful as a lab notebook: a future reader should be able to tell how the scope was connected, how data was acquired, and how a result was produced.
 

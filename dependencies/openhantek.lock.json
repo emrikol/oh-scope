@@ -2,5 +2,5 @@
   "repository": "https://github.com/OpenHantek/OpenHantek6022.git",
   "commit": "00a622ab2e18290af7c4290e492dadbec3321fb7",
   "sourceManifest": "cmake/OpenHantekSources.cmake",
-  "compatibilityApi": 0
+  "compatibilityApi": 1
 }

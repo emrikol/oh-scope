@@ -1,4 +1,4 @@
-# Hantek Android App Plan
+# Oh Scope Android App Plan
 
 **Status:** Initial product and engineering plan  
 **Primary hardware:** Hantek 6022BE, with 6022BL compatibility where practical  
